@@ -1,0 +1,73 @@
+📄 Phishing Email Analysis Report
+
+Task: Task 2 - Analyze a Phishing Email Sample  
+Objective: Identify signs of phishing in a suspicious email  
+Tools Used:  
+- Sample phishing email  
+- MxToolbox Email Header Analyzer (https://mxtoolbox.com/EmailHeaders.aspx)  
+- Email client (Gmail, Outlook, etc.)
+
+------------------------------------------------------------
+Step-by-Step Analysis
+------------------------------------------------------------
+
+1. Sample Phishing Email Used  
+- Google Notifications - "Your google Account Is Suspended – Act Now!"  
+- From Address: support@secure-google-login.com  
+- Claimed Company: google  
+
+2. Check the Sender’s Email  
+- The email is pretending to be from google.  
+- The real sender address is not from the official domain (@google.com).  
+→ ✅ Warning Sign: FAKE sender domain.
+
+3. Header Check Using MxToolbox  
+- SPF Check: ❌ Failed  
+- DKIM: ❌ Not found  
+- Return Path: Different from sender address  
+- Sending IP: Traced to an unknown server  
+→ ✅ Warning Sign: Email fails technical security checks.
+
+4. Suspicious Links or Attachments  
+- Visible Link: https://google.com/verify  
+- Real Link (hover shows): http://secure-login-googleverify.net/verify  
+- Attachment: verify-now.html  
+→ ✅ Warning Sign: Fake links and unsafe attachments.
+
+5. Urgent or Threatening Language  
+- Example: “Your account will be suspended if you don’t act in 24 hours.”  
+→ ✅ Warning Sign: Urgency to create panic and force action.
+
+6. Grammar and Spelling Errors  
+- Examples:  
+  - “Your account will be suspend.”  
+  - “Click imediately to restore.”  
+→ ✅ Warning Sign: Poor grammar is common in phishing scams.
+
+------------------------------------------------------------
+Summary of Phishing Signs
+
+| Indicator                 | Description                                            |
+|--------------------------|--------------------------------------------------------|
+| Fake sender address       | Uses a domain similar to google but not official       |
+| Security checks failed    | SPF/DKIM failed – likely spoofed email                 |
+| Urgent language           | Pressures user to act quickly                          |
+| Link mismatch             | Link text is different from actual destination         |
+| Suspicious attachment     | Unusual file (HTML) possibly dangerous                 |
+| Grammar/spelling issues   | Multiple mistakes reduce credibility                   |
+
+------------------------------------------------------------
+Conclusion
+
+This email shows clear signs of a phishing attempt. It tries to steal information by:
+- Pretending to be google
+- Using a fake sender address
+- Including a fake login link
+- Scaring the user with urgency
+
+⚠️ Actions to Take:
+- Do NOT click any links
+- Do NOT open attachments
+- Report the email to your IT/security team or email provider
+
+End of Report
